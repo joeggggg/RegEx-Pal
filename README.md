@@ -12,9 +12,9 @@ Any changes you make to your deployed app will be automatically pushed to this r
 
 ## Deployment
 
-Your project is live at:
+Test now? This project is live at:
 
-**[https://vercel.com/joegggggs-projects/v0-next-js-regex-ui](https://vercel.com/joegggggs-projects/v0-next-js-regex-ui)**
+**[https://v0-next-js-regex-ui.vercel.app/](https://v0-next-js-regex-ui.vercel.app/)**
 
 ## Build your app
 
