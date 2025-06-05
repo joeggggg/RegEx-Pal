@@ -8,7 +8,7 @@ import { Textarea } from "@/components/ui/textarea"
 import { Checkbox } from "@/components/ui/checkbox"
 import { Badge } from "@/components/ui/badge"
 import { Alert, AlertDescription } from "@/components/ui/alert"
-import { CheckCircle, XCircle, AlertTriangle, Copy, RotateCcw, Info } from "lucide-react"
+import { CheckCircle, XCircle, AlertTriangle, Copy, RotateCcw, Info, Github } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
 export default function RegexValidator() {
@@ -182,8 +182,8 @@ export default function RegexValidator() {
       }
 
       // Test if the pattern matches the text
-      const matches = regex.test(testText)
-      setIsTextValid(matches)
+      const isMatch = regex.test(testText)
+      setIsTextValid(isMatch)
     } catch (err) {
       setError(err instanceof Error ? err.message : "Invalid regular expression")
       setIsPatternValid(false)
@@ -415,6 +415,43 @@ export default function RegexValidator() {
                 </div>
               </CardContent>
             </Card>
+          </div>
+        </div>
+
+        {/* Footer */}
+        <div className="border-t bg-muted/30 p-6 mt-12">
+          <div className="max-w-4xl mx-auto">
+            <div className="grid gap-6 md:grid-cols-3 text-center md:text-left">
+              <div>
+                <h3 className="font-semibold text-sm mb-2">About the Tool</h3>
+                <p className="text-xs text-muted-foreground leading-relaxed">
+                  A modern regex validation tool built with Next.js, providing real-time pattern testing with
+                  human-readable explanations to make regular expressions more accessible.
+                </p>
+              </div>
+              <div>
+                <h3 className="font-semibold text-sm mb-2">About the Author</h3>
+                <p className="text-xs text-muted-foreground leading-relaxed">
+                  Created with ❤️ using v0 by Vercel. Built to help developers and users understand and test regular
+                  expressions with ease and confidence.
+                </p>
+              </div>
+              <div>
+                <h3 className="font-semibold text-sm mb-2">Open Source</h3>
+                <div className="flex items-center justify-center md:justify-start gap-2 mb-2">
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    onClick={() => window.open("https://github.com/joeggggg/RegEx-Pal", "_blank")}
+                    className="h-8"
+                  >
+                    <Github className="h-4 w-4 mr-2" />
+                    Fork on GitHub
+                  </Button>
+                </div>
+                <p className="text-xs text-muted-foreground">© 2024 Regex Validator. MIT License.</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
